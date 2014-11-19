@@ -51,7 +51,8 @@ colorscheme molokai
 highlight Normal ctermbg=NONE
 match ErrorMsg '\s\+$'
 
-let g:airline_theme='molokai'
+let g:airline_powerline_fonts=1
+let g:airline_theme='dark'
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>

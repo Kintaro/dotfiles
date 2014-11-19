@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Set keyboard layouts
-setxkbmap us,de -option "grp:alt_shift_toggle"
+# setxkbmap us,de -option "grp:caps_toggle"
 
 # Set path variables for individually compiled software
 #
@@ -20,3 +20,6 @@ export PATH=/home/wollwage/programs/installed/darktable/bin:$PATH
 
 # TIM
 export PATH=/home/wollwage/programs/src/Tim:$PATH
+
+# WTFTW
+export PATH=/home/wollwage/code/rust/wtftw/target:$PATH
