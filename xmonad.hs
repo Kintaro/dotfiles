@@ -23,7 +23,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal = "/usr/bin/xfce4-terminal"
+myTerminal = "urxvt"
 
 
 ------------------------------------------------------------------------
@@ -87,9 +87,9 @@ myLayout = avoidStruts (
 -- Colors and borders
 -- Currently based on the ir_black theme.
 --
-myNormalBorderColor  = "#7e9014"
+myNormalBorderColor  = "#245361"
 -- myNormalBorderColor  = "#7c7c7c"
-myFocusedBorderColor = "#afc81c"
+myFocusedBorderColor = "#599caa"
 -- myFocusedBorderColor = "#006dfd"
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
@@ -103,11 +103,11 @@ tabConfig = defaultTheme {
 }
 
 -- Color of current window title in xmobar.
-xmobarTitleColor = "#afc81c"
+xmobarTitleColor = "#599caa"
 
 -- Color of current workspace in xmobar.
-xmobarCurrentWorkspaceColor = "#dffb6f"
-xmobarVisibleWorkspaceColor = "#afc81c"
+xmobarCurrentWorkspaceColor = myFocusedBorderColor
+xmobarVisibleWorkspaceColor = "#33859d"
 
 -- Width of the window border in pixels.
 myBorderWidth = 2

@@ -26,6 +26,11 @@ Plugin 'lsdr/monokai'
 Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/CSApprox'
+Plugin 'whatyouhide/vim-gotham'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,13 +51,26 @@ set number
 set mouse=a
 set noswapfile
 set laststatus=2
-set t_Co=256
-colorscheme molokai
+"set t_Co=256
+"set background=dark
+"let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+syntax enable
+"set background=dark
+let g:tomorrow_termcolors=256
+colorscheme tomorrow
 highlight Normal ctermbg=NONE
 match ErrorMsg '\s\+$'
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='tomorrow'
+
+colorscheme tomorrow
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+set hidden
+let g:racer_cmd = "/home/wollwage/programs/src/racer/target/racer"
+let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
+
+map <C-n> :NERDTreeToggle<CR>
