@@ -74,13 +74,10 @@ myManageHook = composeAll
 -- which denotes layout choice.
 --
 myLayout = avoidStruts (
-    Tall 1 (3/100) (1/2) |||
     ResizableTall 1 (3/100) (1/2) [] |||
     Mirror (Tall 1 (3/100) (1/2)) |||
     tabbed shrinkText tabConfig |||
-    Full |||
-    spiral (6/7)) |||
-    noBorders (fullscreenFull Full)
+    noBorders (fullscreenFull Full))
 
 
 ------------------------------------------------------------------------
@@ -110,7 +107,7 @@ xmobarCurrentWorkspaceColor = myFocusedBorderColor
 xmobarVisibleWorkspaceColor = "#33859d"
 
 -- Width of the window border in pixels.
-myBorderWidth = 2
+myBorderWidth = 1
 
 
 ------------------------------------------------------------------------
@@ -390,7 +387,8 @@ defaults = defaultConfig {
     mouseBindings      = myMouseBindings,
 
     -- hooks, layouts
-    layoutHook         = smartSpacing 2 $ smartBorders $ myLayout,
+    -- layoutHook         = smartSpacing 0 $ smartBorders $ myLayout,
+    layoutHook         = smartBorders $ myLayout,
     manageHook         = myManageHook,
     startupHook        = myStartupHook
 }

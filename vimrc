@@ -46,25 +46,26 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-syntax on
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
 set mouse=a
 set noswapfile
 set laststatus=2
-"set t_Co=256
-"set background=dark
-"let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+set t_Co=256
+set background=dark
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
-"set background=dark
-let g:tomorrow_termcolors=256
-colorscheme tomorrow
+syntax on
+colorscheme bluegreen
+let g:bluegreen_termcolors=256
 highlight Normal ctermbg=NONE
 match ErrorMsg '\s\+$'
+colorscheme bluegreen
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='raven'
 
-colorscheme tomorrow
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -73,4 +74,8 @@ set hidden
 let g:racer_cmd = "/home/wollwage/programs/src/racer/target/racer"
 let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
 
+let g:haddock_browser = "chromium-dev"
+
 map <C-n> :NERDTreeToggle<CR>
+
+colorscheme bluegreen
