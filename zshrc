@@ -12,13 +12,13 @@ export COLORTERM=rxvt-unicode-256color
 # Set path variables for individually compiled software
 #
 # Rust
-export PATH=/home/wollwage/programs/installed/rust/bin:$PATH
-export LD_LIBRARY_PATH=/home/wollwage/programs/installed/rust/lib:$LD_LIBRARY_PATH
+#export PATH=/home/wollwage/programs/installed/rust/bin:$PATH
+#export LD_LIBRARY_PATH=/home/wollwage/programs/installed/rust/lib:$LD_LIBRARY_PATH
 
-#export PATH=/home/wollwage/programs/installed/rust-nightly/bin:$PATH
-#export LD_LIBRARY_PATH=/home/wollwage/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
+export PATH=/home/wollwage/programs/installed/rust-nightly/bin:$PATH
+export LD_LIBRARY_PATH=/home/wollwage/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
 # Cargo
-export PATH=/home/wollwage/programs/installed/cargo/bin:$PATH
+#export PATH=/home/wollwage/programs/installed/cargo/bin:$PATH
 #
 
 # Darktable

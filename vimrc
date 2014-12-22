@@ -57,11 +57,10 @@ set background=dark
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
-colorscheme bluegreen
 let g:bluegreen_termcolors=256
-highlight Normal ctermbg=NONE
 match ErrorMsg '\s\+$'
-colorscheme bluegreen
+colorscheme hybrid
+highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
 let g:airline_theme='raven'
@@ -77,5 +76,3 @@ let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
 let g:haddock_browser = "chromium-dev"
 
 map <C-n> :NERDTreeToggle<CR>
-
-colorscheme bluegreen
