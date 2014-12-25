@@ -22,7 +22,7 @@ Config {
                "-f", "/sys/class/power_supply/BAT1/status",
                "-l", "red", "-m", "blue", "-h", "green"]
               600,
-        Run MPD ["-t", "<statei>: <artist> - <title> - <lapsed> <bar>"] 10,
+--        Run MPD ["-t", "<statei>: <artist> - <title> - <lapsed> <bar>"] 10,
         Run Kbd [("de", "de"), ("us", "us")],
         Run StdinReader
     ],

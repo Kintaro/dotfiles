@@ -2,7 +2,7 @@
 urxvt*internalBorder: 10
 urxvt*dynamicColors: on
 
-#include "/home/wollwage/.colors/pantsu"
+#include "/home/rootnode/.colors/pantsu"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
