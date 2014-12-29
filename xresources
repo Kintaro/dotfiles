@@ -1,12 +1,18 @@
 !URxvt*depth: 32
 urxvt*internalBorder: 10
+UXTerm*internalBorder: 10
 urxvt*dynamicColors: on
 
-#include "/home/rootnode/.colors/pantsu"
+#include "/home/rootnode/.colors/molokai"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
 URxvt.font: xft:Envy Code R for Powerline:Regular:pixelsize=12
+UXTerm.renderFont: true
+UXTerm.vt100.renderFont: true
+UXTerm*renderFont: true
+UXTerm*faceName: Envy Code R for Powerline:style=Regular
+UXTerm*faceSize: 10
 !URxvt.boldFont: xft:Envy Code R for Powerline:Bold:size=12
 !URxvt.italicFont: xft:Envy Code R for Powerline:Italic:size=12
 !URxvt*.transparent: true

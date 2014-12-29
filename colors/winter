@@ -1,6 +1,6 @@
 #.Xdefaults - colors and stuff
-*.background: #1f1f2c
-*.foreground: #c7c9cb
+*background: #1f1f2c
+*foreground: #c7c9cb
 
 #Normal Colors
 *.color0: #3f3f4c

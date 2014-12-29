@@ -31,6 +31,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'idris-hackers/idris-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,17 +54,17 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-set background=dark
+"set background=dark
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
-let g:bluegreen_termcolors=256
 match ErrorMsg '\s\+$'
-colorscheme hybrid
+" prev. hybrid
+colorscheme wombat256i
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='raven'
+let g:airline_theme='wombat'
 
 
 let mapleader=","
@@ -76,3 +77,9 @@ let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
 let g:haddock_browser = "chromium-dev"
 
 map <C-n> :NERDTreeToggle<CR>
+
+if &term =~ '^xterm'
+    let &t_SI .= "\<Esc>[6 q"
+    let &t_EI .= "\<Esc>[2 q"
+    autocmd VimLeave * silent !echo -ne "\033]112\007"
+endif

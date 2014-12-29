@@ -12,11 +12,11 @@ export COLORTERM=rxvt-unicode-256color
 # Set path variables for individually compiled software
 #
 # Rust
-export PATH=/home/rootnode/programs/installed/rust/bin:$PATH
-export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust/lib:$LD_LIBRARY_PATH
+#export PATH=/home/rootnode/programs/installed/rust/bin:$PATH
+#export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust/lib:$LD_LIBRARY_PATH
 
-#export PATH=/home/rootnode/programs/installed/rust-nightly/bin:$PATH
-#export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
+export PATH=/home/rootnode/programs/installed/rust-nightly/bin:$PATH
+export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
 
 # Cargo
 export PATH=/home/rootnode/programs/installed/cargo/bin:$PATH
@@ -35,3 +35,5 @@ export PATH=/home/rootnode/code/rust/wtftw/target/release:$PATH
 
 # Gems
 export PATH=/home/rootnode/.gem/ruby/2.1.0/bin:$PATH
+
+echo -e -n "\x1b[\x35 q" # changes to blinking bar
