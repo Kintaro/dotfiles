@@ -32,6 +32,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'idris-hackers/idris-vim'
+Plugin 'jpalardy/vim-slime'
+Plugin 'scrooloose/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,6 +51,7 @@ filetype plugin indent on    " required
 "
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set relativenumber
 set number
 set mouse=a
 set noswapfile
@@ -83,3 +86,13 @@ if &term =~ '^xterm'
     let &t_EI .= "\<Esc>[2 q"
     autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif
+
+au Bufenter *.hs compiler ghc
+au Bufenter,BufRead,BufNewFile *.rs compiler rustc
+
+let g:syntastic_cpp_compiler = 'clang++'
+
+"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"execute "set rtp+=" . g:opamshare . "/merlin/vim"
+"execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
+"au BufRead,BufNewFile *.ml,*.mli compiler ocaml
