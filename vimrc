@@ -34,6 +34,9 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'jpalardy/vim-slime'
 Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'zeekay/vim-racer'
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,18 +60,17 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-"set background=dark
+set background=dark
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
 " prev. hybrid
-colorscheme wombat256i
+colorscheme monokain
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
-
+let g:airline_theme='badwolf'
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>

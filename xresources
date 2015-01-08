@@ -3,11 +3,14 @@ urxvt*internalBorder: 10
 !UXTerm*internalBorder: 10
 urxvt*dynamicColors: on
 
-#include "/home/rootnode/.colors/wombat"
+#include "/home/rootnode/.colors/gjm"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
-URxvt.font: xft:Envy Code R for Powerline:Regular:pixelsize=14
+URxvt.font: xft:Envy Code R for Powerline:Regular:pixelsize=13
+URxvt.boldFont: xft:Envy Code R for Powerline:Regular:pixelsize=13
+!urxvt*font: xft:Terminus for Powerline:Regular:pixelsize=14
+!urxvt*boldFont: xft:Terminus for Powerline:Regular:pixelsize=14
 !UXTerm.renderFont: true
 !UXTerm.vt100.renderFont: true
 !UXTerm*renderFont: true
@@ -20,10 +23,10 @@ URxvt.font: xft:Envy Code R for Powerline:Regular:pixelsize=14
 !URxvt*.shading: 7
 !URxvt*.tintColor: Red
 !
-Xft.antialias: 1
-Xft.autohint: 0
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-Xft.rgba: rgb
+!Xft.antialias: 1
+!Xft.autohint: 0
+!Xft.dpi: 96
+!Xft.hinting: 1
+!Xft.hintstyle: hintfull
+!Xft.lcdfilter: lcddefault
+!Xft.rgba: rgb
