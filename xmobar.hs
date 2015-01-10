@@ -2,7 +2,7 @@ Config {
     font = "xft:Envy Code R for Powerline:pixelsize=12,Sazanami Mincho:pixelsize=10",
     bgColor = "#161616",
     fgColor = "#a5a5a5",
-    border = FullB,
+--    border = FullB,
     borderColor = "#1f1f1f",
     pickBroadest = True,
     iconRoot = "/home/rootnode/.xmonad"

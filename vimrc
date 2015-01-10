@@ -66,11 +66,11 @@ syntax enable
 syntax on
 match ErrorMsg '\s\+$'
 " prev. hybrid
-colorscheme monokain
+colorscheme wombat256i
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
+let g:airline_theme='wombat'
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>

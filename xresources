@@ -3,7 +3,7 @@ urxvt*internalBorder: 10
 !UXTerm*internalBorder: 10
 urxvt*dynamicColors: on
 
-#include "/home/rootnode/.colors/gjm"
+#include "/home/rootnode/.colors/wombat"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
