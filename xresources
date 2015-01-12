@@ -3,7 +3,7 @@ urxvt*internalBorder: 10
 !UXTerm*internalBorder: 10
 urxvt*dynamicColors: on
 
-#include "/home/rootnode/.colors/wombat"
+#include "/home/rootnode/.colors/tomorrow"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
@@ -30,3 +30,5 @@ URxvt.boldFont: xft:Envy Code R for Powerline:Regular:pixelsize=13
 !Xft.hintstyle: hintfull
 !Xft.lcdfilter: lcddefault
 !Xft.rgba: rgb
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot

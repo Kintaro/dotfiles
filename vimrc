@@ -60,17 +60,25 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-set background=dark
+set background=light
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
 " prev. hybrid
-colorscheme wombat256i
+colorscheme Tomorrow
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='tomorrow'
+" タブラインにもairlineを適用
+let g:airline#extensions#tabline#enabled = 1
+" （タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
+let g:airline#extensions#tabline#show_buffers = 0
+" 0でそのタブで開いてるウィンドウ数、1で左のタブから連番
+let g:airline#extensions#tabline#tab_nr_type = 1
+" タブに表示する名前（fnamemodifyの第二引数）
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -82,6 +90,23 @@ let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
 let g:haddock_browser = "chromium-dev"
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-S-1> 1gt
+map <C-S-2> 2gt
+map <C-S-3> 3gt
+map <C-S-4> 4gt
+map <C-S-5> 5gt
+map <C-S-6> 6gt
+map <C-S-7> 7gt
+map <C-S-8> 8gt
+map <C-S-9> 9gt
+" CTRL-Tab is next tab
+noremap <C-Tab> :<C-U>tabnext<CR>
+inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
+cnoremap <C-Tab> <C-C>:tabnext<CR>
+" CTRL-SHIFT-Tab is previous tab
+noremap <C-S-Tab> :<C-U>tabprevious<CR>
+inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 
 if &term =~ '^xterm'
     let &t_SI .= "\<Esc>[6 q"
@@ -98,3 +123,4 @@ let g:syntastic_cpp_compiler = 'clang++'
 "execute "set rtp+=" . g:opamshare . "/merlin/vim"
 "execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
 "au BufRead,BufNewFile *.ml,*.mli compiler ocaml
+

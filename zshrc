@@ -4,7 +4,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Set keyboard layouts
-setxkbmap us,de -option "grp:caps_toggle"
+# setxkbmap us,de -option "grp:caps_toggle"
+# ibus-daemon -rdx
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 export EDITOR=vim
 export COLORTERM=rxvt-unicode-256color
