@@ -1,7 +1,7 @@
 Config {
     font = "xft:Envy Code R for Powerline:pixelsize=12,Sazanami Mincho:pixelsize=10",
-    position = TopW C 98
---    position = Static { xpos = 1938 , ypos = 8, width = 1884, height = 14 },
+--    position = TopW C 98
+    position = Static { xpos = 1938 , ypos = 8, width = 1884, height = 14 },
     bgColor = "#fafafa",
     fgColor = "#4d4d4c",
 --    border = FullB,

@@ -70,7 +70,7 @@ colorscheme Tomorrow
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='sol'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 " （タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
