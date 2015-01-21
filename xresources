@@ -7,7 +7,7 @@ URxvt*colorBD:           #ffffff
 urxvt*dynamicColors: on
 *URxvt.perl-ext-common:         osc-xterm-clipboard
 
-#include "/home/rootnode/.colors/gotham"
+#include "/home/rootnode/.colors/wombat"
 
 URxvt.scrollBar: false
 !URxvt.font: xft:Meslo LG S DZ for Powerline:RegularForPowerline:pixelsize=12
