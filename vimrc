@@ -29,7 +29,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/CSApprox'
+"Plugin 'KevinGoodsell/vim-csexact'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'jpalardy/vim-slime'
@@ -37,6 +37,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'zeekay/vim-racer'
 Plugin 'tpope/vim-surround'
+"Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,7 +52,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"
+
+set enc=utf-8
+set fileencoding=utf-8
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set relativenumber
@@ -61,24 +64,28 @@ set noswapfile
 set laststatus=2
 set t_Co=256
 set background=light
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
 " prev. hybrid
-colorscheme Tomorrow
+colorscheme gotham
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='sol'
-" ¥¿¥Ö¥é¥¤¥ó¤Ë¤âairline¤òÅ¬ÍÑ
+let g:airline_theme='gotham'
+" ã‚¿ãƒ–ãƒ©ã‚¤ãƒ³ã«ã‚‚airlineã‚’é©ç”¨
 let g:airline#extensions#tabline#enabled = 1
-" ¡Ê¥¿¥Ö¤¬°ì¸Ä¤Î¾ì¹ç¡Ë¥Ğ¥Ã¥Õ¥¡¤Î¥ê¥¹¥È¤ò¥¿¥Ö¥é¥¤¥ó¤ËÉ½¼¨¤¹¤ëµ¡Ç½¤ò¥ª¥Õ
+" ï¼ˆã‚¿ãƒ–ãŒä¸€å€‹ã®å ´åˆï¼‰ãƒãƒƒãƒ•ã‚¡ã®ãƒªã‚¹ãƒˆã‚’ã‚¿ãƒ–ãƒ©ã‚¤ãƒ³ã«è¡¨ç¤ºã™ã‚‹æ©Ÿèƒ½ã‚’ã‚ªãƒ•
 let g:airline#extensions#tabline#show_buffers = 0
-" 0¤Ç¤½¤Î¥¿¥Ö¤Ç³«¤¤¤Æ¤ë¥¦¥£¥ó¥É¥¦¿ô¡¢1¤Çº¸¤Î¥¿¥Ö¤«¤éÏ¢ÈÖ
+" 0ã§ãã®ã‚¿ãƒ–ã§é–‹ã„ã¦ã‚‹ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦æ•°ã€1ã§å·¦ã®ã‚¿ãƒ–ã‹ã‚‰é€£ç•ª
 let g:airline#extensions#tabline#tab_nr_type = 1
-" ¥¿¥Ö¤ËÉ½¼¨¤¹¤ëÌ¾Á°¡Êfnamemodify¤ÎÂèÆó°ú¿ô¡Ë
+" ã‚¿ãƒ–ã«è¡¨ç¤ºã™ã‚‹åå‰ï¼ˆfnamemodifyã®ç¬¬äºŒå¼•æ•°ï¼‰
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:lightline = {
+      \ 'colorscheme': 'Tomorrow',
+      \ }
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>

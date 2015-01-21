@@ -10,6 +10,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
+# Set editor and terminal
 export EDITOR=vim
 export COLORTERM=rxvt-unicode-256color
 
@@ -19,25 +20,12 @@ export COLORTERM=rxvt-unicode-256color
 export PATH=/home/rootnode/programs/installed/rust/bin:$PATH
 export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust/lib:$LD_LIBRARY_PATH
 
-#export PATH=/home/rootnode/programs/installed/rust-nightly/bin:$PATH
-#export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
-
 # Cargo
 export PATH=/home/rootnode/programs/installed/cargo/bin:$PATH
-#
 
+# Cabal
 export PATH=/home/rootnode/.cabal/bin:$PATH
 
-# Darktable
-#export PATH=/home/rootnode/programs/installed/darktable/bin:$PATH
-
-# TIM
-#export PATH=/home/rootnode/programs/src/Tim:$PATH
-
-# WTFTW
-#export PATH=/home/rootnode/code/rust/wtftw/target/release:$PATH
-
-# Gems
-#export PATH=/home/rootnode/.gem/ruby/2.1.0/bin:$PATH
-
-echo -e -n "\x1b[\x35 q" # changes to blinking bar
+mdless() {
+    pandoc -s -f markdown -t man "$*" | groff -T utf8 -man | less
+}
