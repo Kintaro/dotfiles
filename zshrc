@@ -26,6 +26,10 @@ export PATH=/home/rootnode/programs/installed/cargo/bin:$PATH
 # Cabal
 export PATH=/home/rootnode/.cabal/bin:$PATH
 
+raw-name() {
+    echo "$*" | cut -d '.' --complement -f2-
+}
+
 # Convert a markdown file to manpage format and pipe it to stdout
 mdcat() {
     grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t man | groff -T utf8 -man
@@ -41,10 +45,14 @@ mdweb() {
     grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t html --webtex=http://chart.apis.google.com/chart\?cht\=tx\&chf\=bg,s,161616FF\&chco=FFFFFF\&chl\= --toc | w3m -T text/html
 }
 
+md-create-pdf() {
+    grep -v "\-\-\-\-\-" "$*" | pandoc --toc -o `(raw-name "$*")`.pdf
+}
+
 md-create-html-slides() {
-    pandoc --self-contained --webtex -t dzslides "$*" -o "$*".html
+    pandoc --self-contained --webtex -t dzslides "$*" -o `(raw-name "$*")`.html
 }
 
 md-create-pdf-slides() {
-    pandoc -t beamer -V theme:CambridgeUS "$*" -o "$*".pdf
+    pandoc -t beamer -V theme:Rochester "$*" -o `(raw-name "$*")`_slides.pdf
 }
