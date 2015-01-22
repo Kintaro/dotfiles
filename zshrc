@@ -46,5 +46,5 @@ md-create-html-slides() {
 }
 
 md-create-pdf-slides() {
-    pandoc -t beamer -V theme:Dresden "$*" -o "$*".pdf
+    pandoc -t beamer -V theme:CambridgeUS "$*" -o "$*".pdf
 }
