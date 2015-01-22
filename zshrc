@@ -46,7 +46,11 @@ mdweb() {
 }
 
 md-create-pdf() {
-    grep -v "\-\-\-\-\-" "$*" | pandoc --toc -o `(raw-name "$*")`.pdf
+    grep -v "\-\-\-\-\-" "$*" | pandoc --listings --toc -o `(raw-name "$*")`.pdf
+}
+
+md-create-pdf-with-template() {
+    grep -v "\-\-\-\-\-" "$*" | pandoc --listings --latex-engine=xelatex --template=latex.template --toc -o `(raw-name "$*")`.pdf
 }
 
 md-create-html-slides() {

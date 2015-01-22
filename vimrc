@@ -37,6 +37,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'zeekay/vim-racer'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,6 +125,9 @@ endif
 
 au Bufenter *.hs compiler ghc
 au Bufenter,BufRead,BufNewFile *.rs compiler rustc
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+set foldlevel=20
 
 let g:syntastic_cpp_compiler = 'clang++'
 
