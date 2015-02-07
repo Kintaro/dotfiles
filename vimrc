@@ -24,7 +24,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'lukerandall/haskellmode-vim'
 Plugin 'lsdr/monokai'
 Plugin 'tomasr/molokai'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
@@ -39,6 +39,10 @@ Plugin 'zeekay/vim-racer'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-scripts/Delphi-7-2010'
+Plugin 'bling/vim-bufferline'
+Plugin 'kurkale6ka/vim-swap'
+Plugin 'noahfrederick/vim-noctu'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,19 +69,20 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-set background=light
+set background=dark
 "let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
-" prev. hybrid
-colorscheme wombat256i
+    " prev. hybrid
+colorscheme classy
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='gotham'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_type = 0
 " （タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
 let g:airline#extensions#tabline#show_buffers = 0
 " 0でそのタブで開いてるウィンドウ数、1で左のタブから連番
@@ -124,6 +129,7 @@ if &term =~ '^xterm'
 endif
 
 au Bufenter *.hs compiler ghc
+au Bufenter,BufNewFile,BufRead *.lpr,*.LPR set ft=delphi
 au Bufenter,BufRead,BufNewFile *.rs compiler rustc
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

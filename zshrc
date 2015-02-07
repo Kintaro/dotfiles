@@ -42,7 +42,7 @@ mdless() {
 
 # Convert a markdown file to html and view it inside the terminal with w3m
 mdweb() {
-    grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t html --webtex=http://chart.apis.google.com/chart\?cht\=tx\&chf\=bg,s,161616FF\&chco=FFFFFF\&chl\= --toc | w3m -T text/html
+    grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t html --webtex=http://chart.apis.google.com/chart\?cht\=tx\&chf\=bg,s,eee8d5FF\&chco=657b83\&chl\= --toc | w3m -T text/html
 }
 
 md-create-pdf() {
