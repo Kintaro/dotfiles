@@ -1,12 +1,12 @@
 Config {
-    font = "xft:Ohsnap:style=Regular:pixelsize=12,Sazanami Mincho:style=Regular:pixelsize=12",
+    font = "-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*,Sazanami Mincho:style=Regular:pixelsize=12",
     position = Top
 --    position = Static { xpos = 1928 , ypos = 8, width = 1904, height = 18 },
-    bgColor = "#151515",
-    fgColor = "#ebebeb",
---    borderColor = "#ebebeb",
---    borderWidth = 0,
---    border = FullB,
+    bgColor = "#19282b",
+    fgColor = "#ffffff",
+    borderColor = "#666666",
+    borderWidth = 1,
+    border = FullB,
     pickBroadest = True,
     iconRoot = "/home/rootnode/.xmonad"
     lowerOnStart = True,

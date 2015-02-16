@@ -19,12 +19,16 @@ export COLORTERM=rxvt-unicode-256color
 # Rust
 export PATH=/home/rootnode/programs/installed/rust/bin:$PATH
 export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust/lib:$LD_LIBRARY_PATH
+export RUST_SRC_PATH=/home/rootnode/programs/src/rust/src
 
 # Cargo
 export PATH=/home/rootnode/programs/installed/cargo/bin:$PATH
 
 # Cabal
 export PATH=/home/rootnode/.cabal/bin:$PATH
+
+# Cuda
+export PATH=/opt/cuda/bin:$PATH
 
 raw-name() {
     echo "$*" | cut -d '.' --complement -f2-
@@ -42,7 +46,7 @@ mdless() {
 
 # Convert a markdown file to html and view it inside the terminal with w3m
 mdweb() {
-    grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t html --webtex=http://chart.apis.google.com/chart\?cht\=tx\&chf\=bg,s,eee8d5FF\&chco=657b83\&chl\= --toc | w3m -T text/html
+    grep -v "\-\-\-\-\-" "$*" | pandoc -s -f markdown -t html --webtex=http://chart.apis.google.com/chart\?cht\=tx\&chf\=bg,s,151515\&chco=ffffff\&chl\= --toc | w3m -T text/html
 }
 
 md-create-pdf() {

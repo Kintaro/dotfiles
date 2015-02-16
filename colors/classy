@@ -1,35 +1,3 @@
-!------------------------------------------------------------------------------
-! XFT Settings
-     
-Xft.dpi:                                        96
-Xft.antialias:                                  true
-Xft.rgba:                                       rgb
-Xft.hinting:                                    true
-Xft.hintstyle:                                  hintslight
-     
-
-!------------------------------------------------------------------------------
-! URXVT - Settings
-
-URxvt*geometry:                                 80x25
-URxvt*foreground:                               white
-URxvt*background:                               #151515
-URxvt*borderLess:                               false
-URxvt*scrollBar:                                false
-URxvt*cursorBlink:                              true
-URxvt*cursorUnderline:                          true
-URxvt*cursorColor:                              #ffffff
-!URxvt*font:                                     xft:Ohsnap:hinting=true:pixelsize=10:antialias=false
-!URxvt*boldFont:                                 xft:Ohsnap:style=bold:hinting=true:pixelsize=10:antialias=false
-!URxvt*italicFont:                               xft:Ohsnap:style=italic:hinting=true:pixelsize=10:antialias=false
-!URxvt*boldItalicFont:                           xft:Ohsnap:style=bolditalic:hinting=true:pixelsize=10:antialias=false
-URxvt.underlineURLs:                            true
-URxvt.url-select.launcher:                      /usr/bin/google-chrome-beta
-URxvt.url-select.underline:                     true
-
-!------------------------------------------------------------------------------
-! URxvt Colors
-
 !black
 URxvt*color0:                                   #303030
 URxvt*color8:                                   #474747

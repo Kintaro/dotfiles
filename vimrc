@@ -24,7 +24,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'lukerandall/haskellmode-vim'
 Plugin 'lsdr/monokai'
 Plugin 'tomasr/molokai'
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
@@ -35,7 +36,8 @@ Plugin 'idris-hackers/idris-vim'
 Plugin 'jpalardy/vim-slime'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'zeekay/vim-racer'
+Plugin 'kspi/cargo-relative'
+Plugin 'wting/rust.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -43,10 +45,12 @@ Plugin 'vim-scripts/Delphi-7-2010'
 Plugin 'bling/vim-bufferline'
 Plugin 'kurkale6ka/vim-swap'
 Plugin 'noahfrederick/vim-noctu'
+Plugin 'farseer90718/vim-taskwarrior' 
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+set omnifunc=syntaxcomplete#Complete
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -69,37 +73,42 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-set background=dark
+set background=light
 "let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
     " prev. hybrid
-colorscheme classy
+let g:hybrid_use_Xresources = 1
+colorscheme noctu
 highlight Normal ctermbg=NONE
 
-let g:airline_powerline_fonts=1
-let g:airline_theme='gotham'
+let g:airline_powerline_fonts=0
+let g:airline_theme='base16'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 0
-" （タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
+"（タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
 let g:airline#extensions#tabline#show_buffers = 0
 " 0でそのタブで開いてるウィンドウ数、1で左のタブから連番
 let g:airline#extensions#tabline#tab_nr_type = 1
 " タブに表示する名前（fnamemodifyの第二引数）
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:lightline = {
-      \ 'colorscheme': 'Tomorrow',
-      \ }
+"let g:lightline = {
+     "\ 'colorscheme': 'wombat',
+     "\ }
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 set hidden
-let g:racer_cmd = "/home/wollwage/programs/src/racer/target/racer"
-let $RUST_SRC_PATH="/home/wollwage/programs/src/rust/src"
+let g:racer_cmd = "/home/rootnode/programs/src/racer/target/racer"
+let $RUST_SRC_PATH="/home/rootnode/programs/src/rust/src"
+let g:racer_experimental_completer = 1
+highlight Pmenu ctermbg=160 ctermfg=230 gui=bold
+imap <silent> <buffer> . .<C-X><C-O>
+
 
 let g:haddock_browser = "chromium-dev"
 
@@ -130,7 +139,6 @@ endif
 
 au Bufenter *.hs compiler ghc
 au Bufenter,BufNewFile,BufRead *.lpr,*.LPR set ft=delphi
-au Bufenter,BufRead,BufNewFile *.rs compiler rustc
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 set foldlevel=20

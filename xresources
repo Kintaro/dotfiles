@@ -1,23 +1,34 @@
-!Xft.dpi: 96
-!Xft.antialias: true
-!Xft.hinting: true
-!Xft.rgba: rgb
-!Xft.autohint: false
-!Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+!Xft.autohint: true
+Xft.hintstyle: hintslight
 !Xft.lcdfilter: lcddefault
 
-urxvt*internalBorder: 10
+urxvt*internalBorder: 5
 urxvt*dynamicColors: on
 *URxvt.perl-ext-common:         osc-xterm-clipboard
 #include "/home/rootnode/.colors/classy"
 URxvt.scrollBar: false
 !URxvt.font: xft:Terminess Powerline:pixelsize=12:style=Regular
-URxvt.font: xft:Ohsnap:pixelsize=12:style=Regular
+!URxvt.font: xft:Ohsnap:pixelsize=12:styleRegular
 !URxvt.font: xft:Source Code Pro for Powerline:pixelsize=12:style=Regular
-URxvt.boldFont: xft:Ohsnap:pixelsize=12:style=Regular
+!URxvt.boldFont: xft:Ohsnap:pixelsize=12:style=Regular
 !URxvt.boldFont: xft:Source Code Pro for Powerline:pixelsize=12:style=Regular
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
+!URxvt.font:-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-15
+!URxvt.boldFont:-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-15
+URxvt.font:-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*
+URxvt.boldFont:-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*
+
 !URxvt*.transparent: true
-!URxvt*.shading: 10
+!URxvt*.shading: 20
+
+URxvt.underlineURLs: true
+URxvt.url-select.launcher:                      /usr/bin/google-chrome-beta
+URxvt.url-select.underline:                     true
+URxvt*cursorBlink:                              true
+URxvt*cursorUnderline:                          true
