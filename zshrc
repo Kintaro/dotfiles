@@ -27,6 +27,9 @@ export PATH=/home/rootnode/programs/installed/cargo/bin:$PATH
 # Cabal
 export PATH=/home/rootnode/.cabal/bin:$PATH
 
+# Xmobar
+export PATH=/home/rootnode/programs/src/xmobar-0.-19/dist/build/xmobar:$PATH
+
 # Cuda
 export PATH=/opt/cuda/bin:$PATH
 

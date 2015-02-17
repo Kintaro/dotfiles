@@ -18,12 +18,14 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'chriskempson/base16-vim'
+Plugin 'zeis/vim-kolor'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'lukerandall/haskellmode-vim'
-Plugin 'lsdr/monokai'
-Plugin 'tomasr/molokai'
+"Plugin 'lsdr/monokai'
+"Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 "Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
@@ -31,21 +33,21 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'KevinGoodsell/vim-csexact'
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'idris-hackers/idris-vim'
-Plugin 'jpalardy/vim-slime'
+"Plugin 'whatyouhide/vim-gotham'
+"Plugin 'idris-hackers/idris-vim'
+"Plugin 'jpalardy/vim-slime'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'kspi/cargo-relative'
 Plugin 'wting/rust.vim'
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-scripts/Delphi-7-2010'
+"Plugin 'vim-scripts/Delphi-7-2010'
 Plugin 'bling/vim-bufferline'
 Plugin 'kurkale6ka/vim-swap'
 Plugin 'noahfrederick/vim-noctu'
-Plugin 'farseer90718/vim-taskwarrior' 
+Plugin 'farseer90718/vim-taskwarrior'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,18 +75,18 @@ set mouse=a
 set noswapfile
 set laststatus=2
 set t_Co=256
-set background=light
+set background=dark
 "let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
     " prev. hybrid
 let g:hybrid_use_Xresources = 1
-colorscheme noctu
+colorscheme kolor
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=0
-let g:airline_theme='base16'
+let g:airline_theme='kolor'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 0

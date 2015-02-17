@@ -2,19 +2,19 @@ Config {
     font = "-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*,Sazanami Mincho:style=Regular:pixelsize=12",
     position = Top
 --    position = Static { xpos = 1928 , ypos = 8, width = 1904, height = 18 },
-    bgColor = "#19282b",
-    fgColor = "#ffffff",
-    borderColor = "#666666",
+    bgColor = "#262626",
+    fgColor = "#e4e4e4",
+    borderColor = "#e4e4e4",
     borderWidth = 1,
     border = FullB,
     pickBroadest = True,
     iconRoot = "/home/rootnode/.xmonad"
     lowerOnStart = True,
     commands = [
-        Run MultiCpu ["-t","<icon=/home/rootnode/.xmonad/cpu.xbm/> <total0> <total1> <total2> <total3> <total4> <total5> <total6> <total7>","-L","30","-H","60","-h","#FFB6B0","-l","#bf1e2d","-n","#FFFFCC","-w","3"] 10,
-        Run Memory ["-t","<icon=/home/rootnode/.xmonad/mem.xbm/> <usedbar>","-H","8192","-L","4096","-h","#FFB6B0","-l","#bf1e2d","-n","#FFFFCC"] 10,
-        Run Swap ["-t","<icon=/home/rootnode/.xmonad/diskette.xbm/> <usedratio>%","-H","1024","-L","512","-h","#FFB6B0","-l","#bf1e2d","-n","#FFFFCC"] 10,
-        Run Network "wlan0" ["-t","<icon=/home/rootnode/.xmonad/wifi_01.xbm/> <rx> | <tx>","-l","#bf1e2d","-S", "True"] 10,
+        Run MultiCpu ["-t","<icon=/home/rootnode/.xmonad/cpu.xbm/> <total0> <total1> <total2> <total3> <total4> <total5> <total6> <total7>","-L","30","-H","60","-h","#FFB6B0","-l","#d7af87","-n","#FFFFCC","-w","3"] 10,
+        Run Memory ["-t","<icon=/home/rootnode/.xmonad/mem.xbm/> <usedbar>","-H","8192","-L","4096","-h","#FFB6B0","-l","#d7af87","-n","#FFFFCC"] 10,
+        Run Swap ["-t","<icon=/home/rootnode/.xmonad/diskette.xbm/> <usedratio>%","-H","1024","-L","512","-h","#FFB6B0","-l","#d7af87","-n","#FFFFCC"] 10,
+        Run Network "wlan0" ["-t","<icon=/home/rootnode/.xmonad/wifi_01.xbm/> <rx> | <tx>","-l","#d7af87","-S", "True"] 10,
         Run Date "%a %b %_d %l:%M:%S" "date" 10,
         Run BatteryP ["BAT1"]
               ["-t", "<acstatus> (<left>%)",
@@ -24,7 +24,7 @@ Config {
                "-f", "/sys/class/power_supply/BAT1/status",
                "-l", "red", "-m", "blue", "-h", "green"]
               600,
-        Run MPD ["-t", "<statei>: <fc=#bf1e2d><artist></fc> - <title> - <lapsed> <bar>"] 10,
+        Run MPD ["-t", "<statei>: <fc=#d7af87><artist></fc> - <title> - <lapsed> <bar>"] 10,
         Run Kbd [("de", "de"), ("us", "us")],
         Run StdinReader
     ],

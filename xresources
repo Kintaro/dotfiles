@@ -8,8 +8,8 @@ Xft.hintstyle: hintslight
 
 urxvt*internalBorder: 5
 urxvt*dynamicColors: on
-*URxvt.perl-ext-common:         osc-xterm-clipboard
-#include "/home/rootnode/.colors/classy"
+!*URxvt.perl-ext-common:         osc-xterm-clipboard
+#include "/home/rootnode/.colors/kolor"
 URxvt.scrollBar: false
 !URxvt.font: xft:Terminess Powerline:pixelsize=12:style=Regular
 !URxvt.font: xft:Ohsnap:pixelsize=12:styleRegular
