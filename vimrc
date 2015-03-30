@@ -26,18 +26,20 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'lukerandall/haskellmode-vim'
 "Plugin 'lsdr/monokai'
 "Plugin 'tomasr/molokai'
-Plugin 'bling/vim-airline'
-"Plugin 'itchyny/lightline.vim'
+"Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'KevinGoodsell/vim-csexact'
-"Plugin 'whatyouhide/vim-gotham'
+"Plugin 'godlygeek/csapprox'
+Plugin 'whatyouhide/vim-gotham'
 "Plugin 'idris-hackers/idris-vim'
 "Plugin 'jpalardy/vim-slime'
 Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neocomplcache.vim'
 Plugin 'kspi/cargo-relative'
 Plugin 'wting/rust.vim'
 "Plugin 'tpope/vim-surround'
@@ -48,6 +50,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'kurkale6ka/vim-swap'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'farseer90718/vim-taskwarrior'
+Plugin 'morhetz/gruvbox'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,19 +77,19 @@ set number
 set mouse=a
 set noswapfile
 set laststatus=2
-set t_Co=256
+"set t_Co=256
 set background=dark
-"let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
     " prev. hybrid
-let g:hybrid_use_Xresources = 1
-colorscheme kolor
+"let g:hybrid_use_Xresources = 1
+colorscheme gruvbox
 highlight Normal ctermbg=NONE
 
-let g:airline_powerline_fonts=0
-let g:airline_theme='kolor'
+let g:airline_powerline_fonts=1
+let g:airline_theme='wombat'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 0
@@ -97,9 +100,9 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 " タブに表示する名前（fnamemodifyの第二引数）
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"let g:lightline = {
-     "\ 'colorscheme': 'wombat',
-     "\ }
+let g:lightline = {
+     \ 'colorscheme': 'wombat',
+     \ }
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -109,7 +112,6 @@ let g:racer_cmd = "/home/rootnode/programs/src/racer/target/racer"
 let $RUST_SRC_PATH="/home/rootnode/programs/src/rust/src"
 let g:racer_experimental_completer = 1
 highlight Pmenu ctermbg=160 ctermfg=230 gui=bold
-imap <silent> <buffer> . .<C-X><C-O>
 
 
 let g:haddock_browser = "chromium-dev"

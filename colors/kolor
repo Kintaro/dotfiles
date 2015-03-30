@@ -19,8 +19,8 @@
 *background:                               kolorBlack
 
 !black
-*color0:                                   kolorBlack
-*color8:                                   kolorBlack
+*color0:                                   kolorDarkGray
+*color8:                                   kolorDarkGray
 !red
 *color1:                                   kolorRed
 *color9:                                   kolorRed

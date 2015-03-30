@@ -3,6 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+start-pulseaudio-x11
+
 # Set keyboard layouts
 # setxkbmap us,de -option "grp:caps_toggle"
 # ibus-daemon -rdx
@@ -67,3 +69,6 @@ md-create-html-slides() {
 md-create-pdf-slides() {
     pandoc -t beamer -V theme:Rochester "$*" -o `(raw-name "$*")`_slides.pdf
 }
+
+#alias ls='/home/rootnode/programs/src/exa/target/exa'
+alias l='ls'
