@@ -27,7 +27,7 @@ Plugin 'lukerandall/haskellmode-vim'
 "Plugin 'lsdr/monokai'
 "Plugin 'tomasr/molokai'
 "Plugin 'bling/vim-airline'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
@@ -51,6 +51,9 @@ Plugin 'kurkale6ka/vim-swap'
 Plugin 'noahfrederick/vim-noctu'
 Plugin 'farseer90718/vim-taskwarrior'
 Plugin 'morhetz/gruvbox'
+Plugin 'Yggdroot/indentLine'
+Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,13 +86,13 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
-    " prev. hybrid
+" prev. hybrid
 "let g:hybrid_use_Xresources = 1
-colorscheme gruvbox
+colorscheme onedark
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='raven'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 0
@@ -101,8 +104,8 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:lightline = {
-     \ 'colorscheme': 'wombat',
-     \ }
+            \ 'colorscheme': 'wombat',
+            \ }
 
 let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -154,3 +157,13 @@ let g:syntastic_cpp_compiler = 'clang++'
 "execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
 "au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+set noshowmode
+set noruler
+set laststatus=0
+set noshowcmd
