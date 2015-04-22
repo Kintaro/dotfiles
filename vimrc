@@ -26,14 +26,14 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'lukerandall/haskellmode-vim'
 "Plugin 'lsdr/monokai'
 "Plugin 'tomasr/molokai'
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 "Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'KevinGoodsell/vim-csexact'
-"Plugin 'godlygeek/csapprox'
+Plugin 'godlygeek/csapprox'
 Plugin 'whatyouhide/vim-gotham'
 "Plugin 'idris-hackers/idris-vim'
 "Plugin 'jpalardy/vim-slime'
@@ -54,6 +54,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'Yggdroot/indentLine'
 Plugin 'junegunn/limelight.vim'
 Plugin 'junegunn/goyo.vim'
+Plugin 'ajacksified/vim-colors-solarized-brown'
+Plugin 'https://github.com/orthecreedence/void.vim.git'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,13 +92,13 @@ syntax on
 match ErrorMsg '\s\+$'
 " prev. hybrid
 "let g:hybrid_use_Xresources = 1
-colorscheme onedark
+colorscheme jellybeans
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='raven'
+let g:airline_theme='jellybeans'
 " タブラインにもairlineを適用
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 "（タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
 let g:airline#extensions#tabline#show_buffers = 0
@@ -163,7 +167,7 @@ autocmd User GoyoLeave Limelight!
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
-set noshowmode
-set noruler
-set laststatus=0
-set noshowcmd
+"set noshowmode
+"set noruler
+"set laststatus=0
+"set noshowcmd

@@ -1,49 +1,49 @@
 [options]
-transparency = 0.5
-pseudo_transparency = true
-#font = Terminess Powerline 10
-font = Droid Sans Mono for Powerline 10
+#transparency = 0.02
+#pseudo_transparency = true
+font = Fantasque Sans Mono 10
+#font = DejaVu Sans Mono 10
 cursor_shape = ibeam
-browser = chromium
+browser = google-chrome-stable
 allow_bold = true
 
 [colors]
 
 # special
-foreground      = #b2a191
-foreground_bold = #b2a191
-cursor          = #b2a191
-background      = #171717
+foreground      = #d0d0d0
+foreground_bold = #d0d0d0
+cursor          = #d0d0d0
+background      = #151515
 
 # black
 color0  = #202020
-color8  = #404040
+color8  = #606060
 
 # red
-color1  = #bf3f34
-color9  = #ff6c5f
+color1  = #993a3b
+color9  = #c25e5f
 
 # green
-color2  = #707d22
-color10 = #b8ca4b
+color2  = #82994f
+color10 = #9bb26a
 
 # yellow
-color3  = #bf7a29
-color11 = #c7a551
+color3  = #d28445
+color11 = #f4bf77
 
 # blue
-color4  = #627a92
-color12 = #95b9de
+color4  = #5994ad
+color12 = #7baabd
 
 # magenta
-color5  = #75507b
-color13 = #ad7fa8
+color5  = #a06594
+color13 = #b485aa
 
 # cyan
-color6  = #757978
-color14 = #9fa590
+color6  = #64aca0
+color14 = #86beb4
 
 # white
-color7  = #b2a191
-color15 = #e8d0c3
+color7  = #d0d0d0
+color15 = #f5f5f5
 

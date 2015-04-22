@@ -3,6 +3,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Activate VI mode
+set -o vi
+
 start-pulseaudio-x11
 
 # Set keyboard layouts
@@ -19,7 +22,7 @@ export COLORTERM=rxvt-unicode-256color
 # Set path variables for individually compiled software
 #
 # Rust
-#export PATH=/home/rootnode/programs/installed/rust-nightly/bin:$PATH
+export PATH=/home/rootnode/programs/installed/rust-nightly/bin:$PATH
 #export LD_LIBRARY_PATH=/home/rootnode/programs/installed/rust-nightly/lib:$LD_LIBRARY_PATH
 #export RUST_SRC_PATH=/home/rootnode/programs/src/rust-nightly/src
 
