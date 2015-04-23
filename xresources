@@ -8,32 +8,13 @@ Xft.rgba: rgb
 urxvt*internalBorder: 5
 urxvt*dynamicColors: on
 !*URxvt.perl-ext-common:         osc-xterm-clipboard
-#include "/home/rootnode/.colors/smear"
+#include "/home/rootnode/.colors/kantan"
 URxvt.scrollBar: false
-!URxvt.font: xft:Terminess Powerline:pixelsize=12:style=Regular
-!URxvt.boldFont: xft:Terminess Powerline:pixelsize=12:style=Regular
-!URxvt.font: xft:Ohsnap:pixelsize=14:style=Regular,xft:Source Code Pro for Powerline:pixelsize=14:style=Regular
-!URxvt.font: xft:berry:pixelsize=12:style=Regular
-!URxvt.boldFont: xft:Ohsnap:pixelsize=14:style=Regular
-!URxvt.boldFont: xft:Source Code Pro for Powerline:pixelsize=12:style=Regular
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-!URxvt.font:-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-15
-!URxvt.boldFont:-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-15
-!URxvt.font:-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*,xft:PowerlineSymbols:pixelsize=10
 URxvt.font:xft:Source Code Pro for Powerline:pixelsize=11
 URxvt.boldFont:xft:Source Code Pro for Powerline:pixelsize=11
-!URxvt.font:xft:Envy Code R for Powerline:pixelsize=11
-!URxvt.boldFont:xft:Envy Code R for Powerline:pixelsize=11
-!URxvt.boldFont:-windows-proggyclean-*-*-*-*-*-*-*-*-*-*-*,xft:PowerlineSymbols:pixelsize=10
-
-!URxvt*.transparent: true
-!URxvt*.shading: 10
-!
-!URxvt.font:-*-berry-*-*-*-*-*-*-*-*-*-*-*
-!URxvt.boldFont:-*-berry-*-*-*-*-*-*-*-*-*-*-*
-
 
 URxvt.underlineURLs: true
 URxvt.url-select.launcher:                      /usr/bin/google-chrome-beta
