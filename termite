@@ -1,10 +1,10 @@
 [options]
 #transparency = 0.02
 #pseudo_transparency = true
-font = Fantasque Sans Mono 10
+font = Source Code Pro for Powerline 12
 #font = DejaVu Sans Mono 10
 cursor_shape = ibeam
-browser = google-chrome-stable
+browser = chromium
 allow_bold = true
 
 [colors]

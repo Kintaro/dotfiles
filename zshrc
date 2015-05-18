@@ -1,3 +1,5 @@
+export TERM=xterm
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -5,8 +7,6 @@ fi
 
 # Activate VI mode
 set -o vi
-
-start-pulseaudio-x11
 
 # Set keyboard layouts
 # setxkbmap us,de -option "grp:caps_toggle"
@@ -40,6 +40,10 @@ export PATH=/home/rootnode/programs/src/xmobar-0.-19/dist/build/xmobar:$PATH
 
 # Cuda
 export PATH=/opt/cuda/bin:$PATH
+
+# Bazel
+export PATH=/home/rootnode/programs/src/bazel/output:$PATH
+
 
 raw-name() {
     echo "$*" | cut -d '.' --complement -f2-

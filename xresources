@@ -13,8 +13,8 @@ URxvt.scrollBar: false
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-URxvt.font:xft:Source Code Pro for Powerline:pixelsize=11
-URxvt.boldFont:xft:Source Code Pro for Powerline:pixelsize=11
+URxvt.font:xft:Source Code Pro for Powerline:pixelsize=14
+URxvt.boldFont:xft:Source Code Pro for Powerline:pixelsize=14
 
 URxvt.underlineURLs: true
 URxvt.url-select.launcher:                      /usr/bin/google-chrome-beta

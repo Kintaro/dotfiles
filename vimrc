@@ -10,70 +10,61 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+" Git plugin
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+
+" Colors
+Plugin 'flazz/vim-colorschemes'
+Plugin 'lsdr/monokai'
+Plugin 'tomasr/molokai'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'morhetz/gruvbox'
+Plugin 'godlygeek/csapprox'
+
+" Movement
+Plugin 'Lokaltog/vim-easymotion'
+
+"Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'chriskempson/base16-vim'
-Plugin 'zeis/vim-kolor'
+"Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'chriskempson/base16-vim'
+"Plugin 'zeis/vim-kolor'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'lukerandall/haskellmode-vim'
-"Plugin 'lsdr/monokai'
-"Plugin 'tomasr/molokai'
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'lukerandall/haskellmode-vim'
 Plugin 'bling/vim-airline'
 "Plugin 'itchyny/lightline.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'KevinGoodsell/vim-csexact'
-Plugin 'godlygeek/csapprox'
-Plugin 'whatyouhide/vim-gotham'
 "Plugin 'idris-hackers/idris-vim'
 "Plugin 'jpalardy/vim-slime'
 Plugin 'scrooloose/syntastic'
 "Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neocomplcache.vim'
-Plugin 'kspi/cargo-relative'
-Plugin 'wting/rust.vim'
+"Plugin 'Shougo/neocomplcache.vim'
+"Plugin 'kspi/cargo-relative'
+"Plugin 'wting/rust.vim'
 "Plugin 'tpope/vim-surround'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'vim-scripts/Delphi-7-2010'
-Plugin 'bling/vim-bufferline'
-Plugin 'kurkale6ka/vim-swap'
-Plugin 'noahfrederick/vim-noctu'
-Plugin 'farseer90718/vim-taskwarrior'
-Plugin 'morhetz/gruvbox'
-Plugin 'Yggdroot/indentLine'
-Plugin 'junegunn/limelight.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'ajacksified/vim-colors-solarized-brown'
-Plugin 'https://github.com/orthecreedence/void.vim.git'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
+"Plugin 'bling/vim-bufferline'
+"Plugin 'kurkale6ka/vim-swap'
+"Plugin 'noahfrederick/vim-noctu'
+"Plugin 'farseer90718/vim-taskwarrior'
+"Plugin 'Yggdroot/indentLine'
+"Plugin 'junegunn/limelight.vim'
+"Plugin 'junegunn/goyo.vim'
+"Plugin 'ajacksified/vim-colors-solarized-brown'
+"Plugin 'https://github.com/orthecreedence/void.vim.git'
+"Plugin 'mattn/gist-vim'
+"Plugin 'mattn/webapi-vim'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 set omnifunc=syntaxcomplete#Complete
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 set enc=utf-8
 set fileencoding=utf-8
@@ -90,7 +81,7 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
-" prev. hybrid
+
 "let g:hybrid_use_Xresources = 1
 colorscheme jellybeans
 highlight Normal ctermbg=NONE
@@ -98,8 +89,8 @@ highlight Normal ctermbg=NONE
 let g:airline_powerline_fonts=1
 let g:airline_theme='jellybeans'
 " タブラインにもairlineを適用
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_type = 1
 "（タブが一個の場合）バッファのリストをタブラインに表示する機能をオフ
 let g:airline#extensions#tabline#show_buffers = 0
 " 0でそのタブで開いてるウィンドウ数、1で左のタブから連番
@@ -151,8 +142,8 @@ endif
 au Bufenter *.hs compiler ghc
 au Bufenter,BufNewFile,BufRead *.lpr,*.LPR set ft=delphi
 
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-set foldlevel=20
+"autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+"set foldlevel=20
 
 let g:syntastic_cpp_compiler = 'clang++'
 
@@ -161,12 +152,12 @@ let g:syntastic_cpp_compiler = 'clang++'
 "execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
 "au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 
-autocmd User GoyoEnter Limelight
-autocmd User GoyoLeave Limelight!
+"autocmd User GoyoEnter Limelight
+"autocmd User GoyoLeave Limelight!
 
 " Color name (:help cterm-colors) or ANSI code
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
+"let g:limelight_conceal_ctermfg = 'gray'
+"let g:limelight_conceal_ctermfg = 240
 "set noshowmode
 "set noruler
 "set laststatus=0

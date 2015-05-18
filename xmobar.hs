@@ -6,7 +6,7 @@ Config {
     fgColor = "#ffffff",
     borderColor = "#ffffff",
     borderWidth = 1,
-    border = FullB,
+    border = NoBorder,
     pickBroadest = True,
     iconRoot = "/home/rootnode/.xmonad"
     lowerOnStart = True,
