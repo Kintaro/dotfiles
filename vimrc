@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 
 " Colors
+Plugin 'Slava/vim-colors-tomorrow'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lsdr/monokai'
 Plugin 'tomasr/molokai'
@@ -21,8 +22,29 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'morhetz/gruvbox'
 Plugin 'godlygeek/csapprox'
 
+" UI
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+
 " Movement
 Plugin 'Lokaltog/vim-easymotion'
+
+" Editin
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+
+" Syntactic helpers
+Plugin 'scrooloose/syntastic'
+
+" Tools
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+
+" Language specific
+Plugin 'kspi/cargo-relative'
+Plugin 'wting/rust.vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -33,21 +55,12 @@ Plugin 'Lokaltog/vim-easymotion'
 " Pass the path to set the runtimepath properly.
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'lukerandall/haskellmode-vim'
-Plugin 'bling/vim-airline'
 "Plugin 'itchyny/lightline.vim'
-"Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
 "Plugin 'KevinGoodsell/vim-csexact'
 "Plugin 'idris-hackers/idris-vim'
 "Plugin 'jpalardy/vim-slime'
-Plugin 'scrooloose/syntastic'
 "Plugin 'Shougo/neocomplete.vim'
 "Plugin 'Shougo/neocomplcache.vim'
-"Plugin 'kspi/cargo-relative'
-"Plugin 'wting/rust.vim'
-"Plugin 'tpope/vim-surround'
-"Plugin 'vim-pandoc/vim-pandoc'
-"Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'vim-scripts/Delphi-7-2010'
 "Plugin 'bling/vim-bufferline'
 "Plugin 'kurkale6ka/vim-swap'
@@ -58,14 +71,13 @@ Plugin 'scrooloose/syntastic'
 "Plugin 'junegunn/goyo.vim'
 "Plugin 'ajacksified/vim-colors-solarized-brown'
 "Plugin 'https://github.com/orthecreedence/void.vim.git'
-"Plugin 'mattn/gist-vim'
-"Plugin 'mattn/webapi-vim'
 "Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 set omnifunc=syntaxcomplete#Complete
 
+set title
 set enc=utf-8
 set fileencoding=utf-8
 
@@ -83,11 +95,11 @@ syntax on
 match ErrorMsg '\s\+$'
 
 "let g:hybrid_use_Xresources = 1
-colorscheme jellybeans
+colorscheme onedark
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='jellybeans'
+let g:airline_theme='tomorrow'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 1
@@ -106,7 +118,7 @@ let mapleader=","
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 set hidden
-let g:racer_cmd = "/home/rootnode/programs/src/racer/target/racer"
+let g:racer_cmd = "/home/rootnode/programs/src/racer/target/debug/racer"
 let $RUST_SRC_PATH="/home/rootnode/programs/src/rust/src"
 let g:racer_experimental_completer = 1
 highlight Pmenu ctermbg=160 ctermfg=230 gui=bold
@@ -162,3 +174,5 @@ let g:syntastic_cpp_compiler = 'clang++'
 "set noruler
 "set laststatus=0
 "set noshowcmd
+:map <f9> :make    - map the F9 key to run make
+:set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ .

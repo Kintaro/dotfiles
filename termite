@@ -1,5 +1,5 @@
 [options]
-#transparency = 0.02
+#transparency = 002
 #pseudo_transparency = true
 font = Source Code Pro for Powerline 12
 #font = DejaVu Sans Mono 10
@@ -10,40 +10,39 @@ allow_bold = true
 [colors]
 
 # special
-foreground      = #d0d0d0
-foreground_bold = #d0d0d0
-cursor          = #d0d0d0
-background      = #151515
+foreground=   #777B9F
+background=   #272932
+cursor=  #50536b
 
 # black
-color0  = #202020
-color8  = #606060
+color0=       #000000
+color8=       #50536b
 
 # red
-color1  = #993a3b
-color9  = #c25e5f
+color1=       #eb6e67
+color9=       #eb6e67
 
 # green
-color2  = #82994f
-color10 = #9bb26a
+color2=       #95ee8f
+color10=      #95ee8f
 
 # yellow
-color3  = #d28445
-color11 = #f4bf77
+color3=       #f8c456
+color11=      #f8c456
 
 # blue
-color4  = #5994ad
-color12 = #7baabd
+color4=       #6eaafb
+color12=      #6eaafb
 
 # magenta
-color5  = #a06594
-color13 = #b485aa
+color5=       #d886f3
+color13=      #d886f3
 
 # cyan
-color6  = #64aca0
-color14 = #86beb4
+color6=       #6cdcf7
+color14=      #6cdcf7
 
 # white
-color7  = #d0d0d0
-color15 = #f5f5f5
+color7=       #b2b2b2
+color15=      #dfdfdf
 
