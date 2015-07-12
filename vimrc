@@ -21,10 +21,13 @@ Plugin 'tomasr/molokai'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'morhetz/gruvbox'
 Plugin 'godlygeek/csapprox'
+Plugin 'rhysd/try-colorscheme.vim'
+Plugin 'Wutzara/vim-materialtheme'
 
 " UI
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
+Plugin 'severin-lemaignan/vim-minimap'
 
 " Movement
 Plugin 'Lokaltog/vim-easymotion'
@@ -39,12 +42,17 @@ Plugin 'scrooloose/syntastic'
 " Tools
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'Vimwiki/vimwiki'
+"Plugin 'mattn/calendar-vim'
+Plugin 'itchyny/calendar.vim'
 
 " Language specific
 Plugin 'kspi/cargo-relative'
 Plugin 'wting/rust.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plugin 'jcf/vim-latex'
+Plugin 'jimenezrick/vimerl'
 
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -95,11 +103,11 @@ syntax on
 match ErrorMsg '\s\+$'
 
 "let g:hybrid_use_Xresources = 1
-colorscheme onedark
+colorscheme materialthemedark
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='jellybeans'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 1
@@ -115,14 +123,41 @@ let g:lightline = {
             \ }
 
 let mapleader=","
+" Delete trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+let g:calendar_google_calendar = 1
+let g:vimwiki_dir_link = 'index'
+let g:vimwiki_use_calendar = 1
+let g:vimwiki_list = [{
+  \ 'path': '$HOME/vimwiki',
+  \ 'template_path': '$HOME/vimwiki/templates',
+  \ 'template_default': 'default',
+  \ 'template_ext': '.html'}]
+autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(), "V")<CR>
+au BufRead,BufNewFile *.wiki set filetype=vimwiki
+:autocmd FileType vimwiki map d :VimwikiMakeDiaryNote
+function! ToggleCalendar()
+  execute ":Calendar"
+  if exists("g:calendar_open")
+    if g:calendar_open == 1
+      execute "q"
+      unlet g:calendar_open
+    else
+      g:calendar_open = 1
+    end
+  else
+    let g:calendar_open = 1
+  end
+endfunction
+:autocmd FileType vimwiki map c :call ToggleCalendar()<CR>
 
 set hidden
 let g:racer_cmd = "/home/rootnode/programs/src/racer/target/debug/racer"
 let $RUST_SRC_PATH="/home/rootnode/programs/src/rust/src"
 let g:racer_experimental_completer = 1
 highlight Pmenu ctermbg=160 ctermfg=230 gui=bold
-
+set grepprg=grep\ -nH\ $*
 
 let g:haddock_browser = "chromium-dev"
 
@@ -154,25 +189,11 @@ endif
 au Bufenter *.hs compiler ghc
 au Bufenter,BufNewFile,BufRead *.lpr,*.LPR set ft=delphi
 
-"autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-"set foldlevel=20
-
 let g:syntastic_cpp_compiler = 'clang++'
-
-"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-"execute "set rtp+=" . g:opamshare . "/merlin/vim"
-"execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
-"au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 
 "autocmd User GoyoEnter Limelight
 "autocmd User GoyoLeave Limelight!
 
-" Color name (:help cterm-colors) or ANSI code
-"let g:limelight_conceal_ctermfg = 'gray'
-"let g:limelight_conceal_ctermfg = 240
-"set noshowmode
-"set noruler
-"set laststatus=0
-"set noshowcmd
-:map <f9> :make    - map the F9 key to run make
+:map <f9> :make
 :set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ .
+:set nofoldenable

@@ -1,48 +1,49 @@
 [options]
 #transparency = 002
 #pseudo_transparency = true
-font = Source Code Pro for Powerline 12
+font = Fira Mono for Powerline 12
 #font = DejaVu Sans Mono 10
 cursor_shape = ibeam
 browser = chromium
-allow_bold = true
+allow_bold = false
 
 [colors]
 
 # special
-foreground=   #777B9F
-background=   #272932
-cursor=  #50536b
+foreground      = #c4c7d1
+foreground_bold = #c4c7d1
+cursor          = #c4c7d1
+background      = #1b1b1b
 
 # black
-color0=       #000000
-color8=       #50536b
+color0  = #073642
+color8  = #ff002b
 
 # red
-color1=       #eb6e67
-color9=       #eb6e67
+color1  = #eb606b
+color9  = #eb606b
 
 # green
-color2=       #95ee8f
-color10=      #95ee8f
+color2  = #c3e88d
+color10 = #c3e88d
 
 # yellow
-color3=       #f8c456
-color11=      #f8c456
+color3  = #f7eb95
+color11 = #f7eb95
 
 # blue
-color4=       #6eaafb
-color12=      #6eaafb
+color4  = #80cbc4
+color12 = #7dc6bf
 
 # magenta
-color5=       #d886f3
-color13=      #d886f3
+color5  = #ff2490
+color13 = #6c71c4
 
 # cyan
-color6=       #6cdcf7
-color14=      #6cdcf7
+color6  = #aeddff
+color14 = #35434d
 
 # white
-color7=       #b2b2b2
-color15=      #dfdfdf
+color7  = #ffffff
+color15 = #ffffff
 

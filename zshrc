@@ -1,5 +1,8 @@
 export TERM=xterm
 
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export BROWSER=chromium
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -44,6 +47,9 @@ export PATH=/opt/cuda/bin:$PATH
 # Bazel
 export PATH=/home/rootnode/programs/src/bazel/output:$PATH
 
+# Wrk
+export PATH=/opt/wrk/bin:$PATH
+export WRK_HOME=/opt/wrk
 
 raw-name() {
     echo "$*" | cut -d '.' --complement -f2-
