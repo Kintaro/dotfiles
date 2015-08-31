@@ -1,49 +1,50 @@
 [options]
 #transparency = 002
 #pseudo_transparency = true
-font = Fira Mono for Powerline 12
+#font = Ubuntu Mono derivative Powerline 14
+font = Terminus 12
+#font = Fira Mono for Powerline 12
 #font = DejaVu Sans Mono 10
 cursor_shape = ibeam
 browser = chromium
 allow_bold = false
-
 [colors]
 
 # special
-foreground      = #c4c7d1
-foreground_bold = #c4c7d1
-cursor          = #c4c7d1
-background      = #1b1b1b
+foreground      = #afc3a8
+foreground_bold = #8fa388
+cursor          = #8fa388
+background      = #1d2426
 
 # black
-color0  = #073642
-color8  = #ff002b
+color0  = #39474a
+color8  = #4c5f63
 
 # red
-color1  = #eb606b
-color9  = #eb606b
+color1  = #986345
+color9  = #b07350
 
 # green
-color2  = #c3e88d
-color10 = #c3e88d
+color2  = #788249
+color10 = #869151
 
 # yellow
-color3  = #f7eb95
-color11 = #f7eb95
+color3  = #9b6a46
+color11 = #af6b42
 
 # blue
-color4  = #80cbc4
-color12 = #7dc6bf
+color4  = #3e5951
+color12 = #567a6e
 
 # magenta
-color5  = #ff2490
-color13 = #6c71c4
+color5  = #b9924a
+color13 = #d69d55
 
 # cyan
-color6  = #aeddff
-color14 = #35434d
+color6  = #5d796a
+color14 = #668574
 
 # white
-color7  = #ffffff
-color15 = #ffffff
+color7  = #977d5e
+color15 = #ab9c71
 

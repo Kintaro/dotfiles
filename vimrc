@@ -20,9 +20,13 @@ Plugin 'lsdr/monokai'
 Plugin 'tomasr/molokai'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'morhetz/gruvbox'
-Plugin 'godlygeek/csapprox'
 Plugin 'rhysd/try-colorscheme.vim'
 Plugin 'Wutzara/vim-materialtheme'
+Plugin 'atweiden/vim-colors-behelit'
+Plugin 'mhumeSF/one-dark.vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " UI
 Plugin 'scrooloose/nerdtree'
@@ -43,7 +47,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'Vimwiki/vimwiki'
-"Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/calendar.vim'
 
 " Language specific
@@ -51,8 +54,8 @@ Plugin 'kspi/cargo-relative'
 Plugin 'wting/rust.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-"Plugin 'jcf/vim-latex'
 Plugin 'jimenezrick/vimerl'
+Plugin 'LnL7/vim-nix'
 
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -102,12 +105,13 @@ syntax enable
 syntax on
 match ErrorMsg '\s\+$'
 
+"let g:gruvbox_termcolors=16
 "let g:hybrid_use_Xresources = 1
-colorscheme materialthemedark
+colorscheme materialtheme_new
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='jellybeans'
+let g:airline_theme='lucius'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 1
