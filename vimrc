@@ -27,16 +27,17 @@ Plugin 'mhumeSF/one-dark.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'gilgigilgil/anderson.vim'
 
 " UI
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'severin-lemaignan/vim-minimap'
+"Plugin 'severin-lemaignan/vim-minimap'
 
 " Movement
 Plugin 'Lokaltog/vim-easymotion'
 
-" Editin
+" Editing
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 
@@ -107,7 +108,7 @@ match ErrorMsg '\s\+$'
 
 "let g:gruvbox_termcolors=16
 "let g:hybrid_use_Xresources = 1
-colorscheme materialtheme_new
+colorscheme butter
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
@@ -157,7 +158,7 @@ endfunction
 :autocmd FileType vimwiki map c :call ToggleCalendar()<CR>
 
 set hidden
-let g:racer_cmd = "/home/rootnode/programs/src/racer/target/debug/racer"
+let g:racer_cmd = "/home/rootnode/.nix-profile/bin/racer"
 let $RUST_SRC_PATH="/home/rootnode/programs/src/rust/src"
 let g:racer_experimental_completer = 1
 highlight Pmenu ctermbg=160 ctermfg=230 gui=bold
@@ -183,6 +184,16 @@ cnoremap <C-Tab> <C-C>:tabnext<CR>
 noremap <C-S-Tab> :<C-U>tabprevious<CR>
 inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
 cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
+
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 if &term =~ '^xterm'
     let &t_SI .= "\<Esc>[6 q"

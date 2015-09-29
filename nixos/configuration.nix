@@ -1,11 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  require = [ /root/hydra/hydra-module.nix ];
+  #require = [ /root/hydra/hydra-module.nix ];
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -26,13 +22,6 @@
 
   time.timeZone = "Asia/Tokyo";
 
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "lat9w-16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
-
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -51,7 +40,7 @@
 
   # Enable IME support for japanese input
   programs.ibus.enable = true;
-  programs.ibus.plugins = [ pkgs.ibus-anthy ];
+  programs.ibus.plugins = [ pkgs.ibus-anthy pkgs.mozc ];
   programs.zsh.enable = true;
 
   # Set default shell for all users to zsh
@@ -62,6 +51,7 @@
 
   # We need some music and graphics
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
   hardware.opengl.driSupport32Bit = true;
   hardware.bumblebee.enable = true;
 
@@ -113,17 +103,17 @@
   services.xserver.synaptics.enable = true;
 
   # Enable and configure hydra build server
-  services.hydra = {
-    enable = true;
-    package = (import /root/hydra/release.nix {}).build.x86_64-linux;
+  #services.hydra = {
+    #enable = true;
+    #package = (import /root/hydra/release.nix {}).build.x86_64-linux;
     #dbi = "dbi:Pg:dbname=hydra;host=localhost;user=hydra;";
-    hydraURL = "http://localhost:3000";
-    notificationSender = "mail.wollwage@gmail.com";
-  };
+    #hydraURL = "http://localhost:3000";
+    #notificationSender = "mail.wollwage@gmail.com";
+  #};
 
   # We need postgres for hydra
-  services.postgresql.enable = true;
-  services.postgresql.package = pkgs.postgresql;
+  #services.postgresql.enable = true;
+  #services.postgresql.package = pkgs.postgresql;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.rootnode = {

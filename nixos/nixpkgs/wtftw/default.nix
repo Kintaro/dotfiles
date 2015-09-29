@@ -7,8 +7,8 @@ buildRustPackage rec {
   name = "wtftw";
   src = fetchgit {
     url = https://github.com/Kintaro/wtftw;
-    rev = "ee15118ec599e15da6aa91f8b12b58816f7103e8";
-    sha256 = "fef68055d5d7542da290c527f27a7ccd3caa05f04deeecd2ee2db2b300a9cb6b";
+    rev = "70f6af7dbddad4354d39f415bc9caa4cc10049c0";
+    sha256 = "634bbc2cb558f3d82da869f7e2c8b7a7cde8d65d0ba21d85230d2e3071b5df41";
   };
 
   depsSha256 = "0nhcfimzhajvkfyl7m31d3spqdr7cw33yi4fff8sjd4cd9fn0gr6";
