@@ -1,4 +1,4 @@
-{ stdenv, fetchgit, cargo, rustPlatform, libXinerama, libX11, xlibs }:
+{ stdenv, fetchgit, rustPlatform, libXinerama, libX11, xlibs, pkgconfig }:
 
 with import <nixpkgs> { }; with rustPlatform; with xlibs;
 
@@ -7,14 +7,18 @@ buildRustPackage rec {
   name = "wtftw";
   src = fetchgit {
     url = https://github.com/Kintaro/wtftw;
-    rev = "70f6af7dbddad4354d39f415bc9caa4cc10049c0";
-    sha256 = "634bbc2cb558f3d82da869f7e2c8b7a7cde8d65d0ba21d85230d2e3071b5df41";
+    rev = "6b6b1b4405922f6330b302700320ab5ff8732f43";
+    sha256 = "d586136c4a40e97bca6f5d8b9e39eabd2d91b19df54c7f693894f75eebdaf85a";
   };
 
-  depsSha256 = "0nhcfimzhajvkfyl7m31d3spqdr7cw33yi4fff8sjd4cd9fn0gr6";
+  depsSha256 = "13729lr1imzmi7ym6j2bqxi9d6vknxn85sbcyn12p4qiq1dra8iy";
 
-  buildInputs = [ makeWrapper libXinerama libX11 ];
+  buildInputs = [ makeWrapper libXinerama libX11 pkgconfig ];
   libPath = lib.makeLibraryPath [ libXinerama libX11 ];
+
+  preInstall = ''
+    cargo update
+  '';
 
   installPhase = ''
     mkdir -p $out/bin

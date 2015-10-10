@@ -101,7 +101,7 @@ set noswapfile
 set laststatus=2
 "set t_Co=256
 set background=dark
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 syntax enable
 syntax on
 match ErrorMsg '\s\+$'
@@ -112,7 +112,7 @@ colorscheme butter
 highlight Normal ctermbg=NONE
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='lucius'
+let g:airline_theme='base16'
 " タブラインにもairlineを適用
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 1

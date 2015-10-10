@@ -14,7 +14,7 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda";
 
-  boot.kernelPackages = pkgs.linuxPackages_4_1;
+  boot.kernelPackages = pkgs.linuxPackages_4_2;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.hostId = "ce70cf3d";
