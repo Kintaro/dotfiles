@@ -57,7 +57,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'jimenezrick/vimerl'
 Plugin 'LnL7/vim-nix'
-
+Plugin 'elixir-lang/vim-elixir'
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'

@@ -3,6 +3,11 @@
   steam.primus = true;
   steam.java = true;
 
+  firefox = {
+     enableGoogleTalkPlugin = true;
+     enableAdobeFlash = true;
+    };
+
   packageOverrides = pkgs:
   {
     w3m = pkgs.w3m.override { graphicsSupport = true; };

@@ -95,6 +95,7 @@
   services.xserver.enable = true;
 
   # Enable the window managers
+  services.xserver.displayManager.startGnuPgAgent = true;
   services.xserver.windowManager.wtftw.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
@@ -128,4 +129,13 @@
     {
       wtftw = pkgs.callPackage /home/rootnode/.nixpkgs/wtftw {};
     };
+
+   services.udev.extraRules = ''
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e42", MODE="0600", OWNER="rootnode"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e40", MODE="0600", OWNER="rootnode"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e41", MODE="0600", OWNER="rootnode"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d001", MODE="0666", OWNER="rootnode"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d001", MODE="0600", OWNER="rootnode"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee0", MODE="0600", OWNER="rootnode"
+  '';
 }
