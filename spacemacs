@@ -213,6 +213,11 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; Activate line numbers globally
+  (setq global-linum-mode t)
+  (setq linum-relative-mode t)
+
+  ;; 
   (setq org-log-done 'time)
   (setq epa-file-select-keys nil)
 
@@ -241,6 +246,46 @@ layers configuration. You are free to put any user code."
                 ("TODO" ("WAITING") ("CANCELLED") ("HOLD") ("PAUSED"))
                 ("NEXT" ("WAITING") ("CANCELLED") ("HOLD") ("PAUSED"))
                 ("DONE" ("WAITING") ("CANCELLED") ("HOLD") ("PAUSED")))))
+
+  (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
+  
+                                        ; Make babel results blocks lowercase
+  (setq org-babel-results-keyword "results")
+  
+  (defun bh/display-inline-images ()
+    (condition-case nil
+        (org-display-inline-images)
+      (error nil)))
+
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((ditaa . t)))
+
+  ;;(org-babel-do-load-languages
+  ;; (quote org-babel-load-languages)
+  ;; (quote ((emacs-lisp . t)
+  ;;         (dot . t)
+  ;;         (ditaa . t)
+  ;;         (R . t)
+  ;;         (python . t)
+  ;;         (ruby . t)
+  ;;         (gnuplot . t)
+  ;;         (clojure . t)
+  ;;         (sh . t)
+  ;;         (ledger . t)
+  ;;         (org . t)
+  ;;         (plantuml . t)
+  ;;         (latex . t))))
+  
+                                        ; Do not prompt to confirm evaluation
+                                        ; This may be dangerous - make sure you understand the consequences
+                                        ; of setting this -- see the docstring for details
+  (setq org-confirm-babel-evaluate nil)
+  
+                                        ; Use fundamental mode when editing plantuml blocks with C-c '
+  (add-to-list 'org-src-lang-modes (quote ("plantuml" . fundamental)))
+
+  (setq org-startup-with-inline-images nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -250,9 +295,12 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
  '(custom-safe-themes
    (quote
-    ("ce371b56cf0952d838db6dafd92aaa6e3aadd74199c06ed7440da9df5595c4ae" "118717ce0a2645a0cf240b044999f964577ee10137b1f992b09a317d5073c02d" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" default)))
+    ("3b0a350918ee819dca209cec62d867678d7dac74f6195f5e3799aa206358a983" "cbd7eaaa428c78efa517e59c6db82f836d5e832a8a0b8692a73fa85ce50e7471" "2dd32048690787844d8cba601ed3dd8b2f419e9bd985898d0c3792671a05b96b" "a2e7b508533d46b701ad3b055e7c708323fb110b6676a8be458a758dd8f24e27" "8fed5e4b89cf69107d524c4b91b4a4c35bcf1b3563d5f306608f0c48f580fdf8" "ce371b56cf0952d838db6dafd92aaa6e3aadd74199c06ed7440da9df5595c4ae" "118717ce0a2645a0cf240b044999f964577ee10137b1f992b09a317d5073c02d" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" default)))
+ '(hl-sexp-background-color "#1c1f26")
  '(org-agenda-files (quote ("~/org/work.org.gpg" "~/org/todo.org.gpg"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

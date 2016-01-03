@@ -95,7 +95,6 @@
   services.xserver.enable = true;
 
   # Enable the window managers
-  services.xserver.displayManager.startGnuPgAgent = true;
   services.xserver.windowManager.wtftw.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
